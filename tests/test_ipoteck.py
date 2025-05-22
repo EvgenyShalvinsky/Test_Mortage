@@ -88,9 +88,6 @@ def test_step4_validation(page):
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Первый взнос, ₽ 46%").click()
-    # assert page.locator(
-    #     "[data-test=\"independent-parent-iframe\"] iframe"
-    # ).content_frame.get_by_role("textbox", name="Первый взнос, ₽ 46%").fill("Aa") is False
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Первый взнос, ₽ 46%").fill("70 000")
@@ -566,5 +563,5 @@ def test_step11_validation_table2(page):
     ).content_frame.get_by_text("Срок30 лет").is_visible()
     assert page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_text("Тип программы")
+    ).content_frame.get_by_text("Тип программы").is_visible()
 
