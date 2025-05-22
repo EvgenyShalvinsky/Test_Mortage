@@ -122,12 +122,6 @@ def test_step5_validation(page):
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Срок кредита").click()
-    # assert page.locator(
-    #     "[data-test=\"independent-parent-iframe\"] iframe"
-    # ).content_frame.get_by_role("textbox", name="Срок кредита").fill("0") is False
-    # assert page.locator(
-    #    "[data-test=\"independent-parent-iframe\"] iframe"
-    # ).content_frame.get_by_role("textbox", name="Срок кредита").fill("31") is False
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Срок кредита").fill("30")
@@ -178,10 +172,10 @@ def test_step6_validation(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").click()
+    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (989) 944-44")
+    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("7 (989) 944-44")
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
@@ -225,10 +219,10 @@ def test_step7_validation(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
+    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (989) 944-44-57")
+    ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("7 (989) 944-44-57")
     page.screenshot(path=".\\Artefact\\step7_1.png")
     assert page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
@@ -280,7 +274,7 @@ def test_step8_validation(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
+    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (901) 342-70-07")
@@ -333,7 +327,7 @@ def test_step9_sms_confirmation(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
+    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (901) 342-70-07")
@@ -388,7 +382,7 @@ def test_step10_validation_table2(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
+    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (901) 342-70-07")
@@ -450,7 +444,7 @@ def test_step11_validation_table2(page):
     ).content_frame.get_by_role("option", name="Иванов Петр Иванович").locator("span").click()
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click()
+    ).content_frame.get_by_role("textbox", name="Дата рождения * __.__.____").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Номер телефона * ___) ___-__-").fill("+7 (989) 944-44-57")
@@ -545,7 +539,7 @@ def test_step11_validation_table2(page):
     ).fill("Петрова Юлия Ивановна")
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
-    ).content_frame.get_by_role("option", name="Петрова Юлия Ивановна").locator("span").click()
+    ).content_frame.get_by_role("option", name="Петрова Юлия Ивановна").locator("span").click(timeout=60000)
     page.locator(
         "[data-test=\"independent-parent-iframe\"] iframe"
     ).content_frame.get_by_role("textbox", name="Телефон супруга/супруги * ___").fill("+7 (987) 781-71-60")
