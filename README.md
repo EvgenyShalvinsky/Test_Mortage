@@ -10,6 +10,7 @@ Python+Playwrite+Pytest.
 Так же потребуется выплнить команды:
 
 pip install playwrite-pytest
+
 playwite install
 
 
